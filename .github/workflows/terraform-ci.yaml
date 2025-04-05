@@ -40,7 +40,7 @@ jobs:
 
     - name: Init TFLint
       run: tflint --init
-       - name: Run TFLint
+    - name: Run TFLint
       run: tflint -f compact
 
     - name: Checkov
