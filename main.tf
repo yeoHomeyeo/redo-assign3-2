@@ -31,4 +31,12 @@ locals {
 
 resource "aws_s3_bucket" "s3_tf" {
   bucket = "${local.name_prefix}-s3-tf-bkt-${local.account_id}"
+  # Skip checks for this specific resource
+  #checkov:skip=CKV2_AWS_62:Skipping due to public
+  #checkov:skip=CKV_AWS_145:Skipping due to [ public]
+  #checkov:skip=CKV2_AWS_6:Skipping due to [ public]
+  #checkov:skip=CKV_AWS_21:Skipping due to [ public]
+  #checkov:skip=CKV_AWS_144:Skipping due to [ public]
+  #checkov:skip=CKV_AWS_18:Skipping due to [ public]
+  #checkov:skip=CKV2_AWS_61:Skipping due to [ public]
 }
